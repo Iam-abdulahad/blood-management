@@ -1,10 +1,14 @@
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './components/Home/Home.jsx';
 import React from 'react';
 import Header from './components/Header/Header.jsx';
+import Donors from './components/Donors/Donors.jsx';
+import Faq from './components/FAQ/Faq.jsx';
+import About from './components/About/About.jsx';
+import Login from './components/Login/Login.jsx';
+import SignUp from './components/Login/Signup.jsx';
 
 
 const router = createBrowserRouter([
@@ -16,6 +20,26 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/donors",
+        element: <Donors></Donors>,
+      },
+      {
+        path : "/faq",
+        element: <Faq></Faq>
+      },
+      {
+        path: "/about_us",
+        element: <About></About>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/sign_up",
+        element: <SignUp></SignUp>
       },
     ]
   }
