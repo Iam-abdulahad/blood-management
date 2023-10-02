@@ -8,7 +8,7 @@ import Donors from './components/Donors/Donors.jsx';
 import Faq from './components/FAQ/Faq.jsx';
 import About from './components/About/About.jsx';
 import Login from './components/Login/Login.jsx';
-import SignUp from './components/Login/Signup.jsx';
+import SignUp from './components/Login/SignUp';
 
 
 const router = createBrowserRouter([
