@@ -1,10 +1,12 @@
 import React from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
+import TsParticles from '../Background/TsParticles';
 
 const Login = () => {
     return (
         <div className='container mx-auto flex justify-center pt-12'>
+            <TsParticles></TsParticles>
             <div className="card">
                 <div className="bg ">
 
