@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
+import TsParticles2 from '../Background/TsParticles2';
 
 const SignUp = () => {
     return (
         <div className='container mx-auto flex justify-center pt-12'>
+            <TsParticles2></TsParticles2>
             <div className="card">
                 <div className="bg ">
 
