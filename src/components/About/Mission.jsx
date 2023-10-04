@@ -3,11 +3,11 @@ import MissionImg from '../../assets/Mission.jpg';
 
 const Mission = () => {
     return (
-        <div className='container mx-auto'>
-            <div>
-                <h1 className='text-red text-4xl text-center py-8'>Mission</h1>
+        <div className='container mx-auto text-white'>
+            <div className='text-center'>
+                <h1 className="text-2xl font-medium title-font mb-4">MISSION</h1>
             </div>
-            <section className="text-gray-600 body-font">
+            <section className="text-gray-600 body-font text-white">
                 <div className="container px-5 py-24 mx-auto flex flex-wrap">
                     <div className="flex flex-wrap w-full">
                         <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
