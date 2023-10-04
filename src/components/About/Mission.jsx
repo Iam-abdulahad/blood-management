@@ -21,7 +21,7 @@ const Mission = () => {
                                     </svg>
                                 </div>
                                 <div className="flex-grow pl-4">
-                                    <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Mission-1: Save Lives Through Donations</h2>
+                                    <h2 className="font-medium title-font text-sm text-gray-300 mb-1 tracking-wider">Mission-1: Save Lives Through Donations</h2>
                                     <p className="leading-relaxed">Encourage regular blood and plasma donations to save lives.</p>
                                 </div>
                             </div>
@@ -35,7 +35,7 @@ const Mission = () => {
                                     </svg>
                                 </div>
                                 <div className="flex-grow pl-4">
-                                    <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Mission-2: Drive Innovation in Blood Care</h2>
+                                    <h2 className="font-medium title-font text-sm text-gray-300 mb-1 tracking-wider">Mission-2: Drive Innovation in Blood Care</h2>
                                     <p className="leading-relaxed">Support research and innovation for safer transfusions.</p>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@ const Mission = () => {
                                     </svg>
                                 </div>
                                 <div className="flex-grow pl-4">
-                                    <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Mission-3: Advocate for Accessible Blood</h2>
+                                    <h2 className="font-medium title-font text-sm text-gray-300 mb-1 tracking-wider">Mission-3: Advocate for Accessible Blood</h2>
                                     <p className="leading-relaxed">Raise awareness and advocate for equitable blood access.</p>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@ const Mission = () => {
                                     </svg>
                                 </div>
                                 <div className="flex-grow pl-4">
-                                    <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Mission-4: Build Strong Healthcare Partnerships</h2>
+                                    <h2 className="font-medium title-font text-sm text-gray-300 mb-1 tracking-wider">Mission-4: Build Strong Healthcare Partnerships</h2>
                                     <p className="leading-relaxed">Strengthen collaborations for effective blood management.</p>
                                 </div>
                             </div>
@@ -77,7 +77,7 @@ const Mission = () => {
                                     </svg>
                                 </div>
                                 <div className="flex-grow pl-4">
-                                    <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Mission-5: Global Impact in Emergencies</h2>
+                                    <h2 className="font-medium title-font text-sm text-gray-300 mb-1 tracking-wider">Mission-5: Global Impact in Emergencies</h2>
                                     <p className="leading-relaxed">Provide vital support during crises worldwide.</p>
                                 </div>
                             </div>

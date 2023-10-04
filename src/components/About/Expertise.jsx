@@ -17,7 +17,7 @@ const Expertise = () => {
                         <div  className="h-full flex flex-col items-center text-center">
                             <img alt="team"  className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src={Female} />
                                 <div  className="w-full">
-                                    <h2  className="title-font font-medium text-lg text-gray-900">Dr. Emily Parker</h2>
+                                    <h2  className="title-font font-medium text-lg text-gray-200">Dr. Emily Parker</h2>
                                     <h3  className="text-gray-300 mb-3">MD</h3>
                                     <p  className="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
                                     <span  className="inline-flex">
@@ -44,7 +44,7 @@ const Expertise = () => {
                         <div  className="h-full flex flex-col items-center text-center">
                             <img alt="team"  className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src={Male} />
                                 <div  className="w-full">
-                                    <h2  className="title-font font-medium text-lg text-gray-900">Dr. Michael Roberts</h2>
+                                    <h2  className="title-font font-medium text-lg text-gray-200">Dr. Michael Roberts</h2>
                                     <h3  className="text-gray-300 mb-3">PhD</h3>
                                     <p  className="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
                                     <span  className="inline-flex">
@@ -71,7 +71,7 @@ const Expertise = () => {
                         <div  className="h-full flex flex-col items-center text-center">
                             <img alt="team"  className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src={Female2}/>
                                 <div  className="w-full">
-                                    <h2  className="title-font font-medium text-lg text-gray-900">Dr. Sarah Johnson</h2>
+                                    <h2  className="title-font font-medium text-lg text-gray-200">Dr. Sarah Johnson</h2>
                                     <h3  className="text-gray-300 mb-3">DO</h3>
                                     <p  className="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
                                     <span  className="inline-flex">
@@ -98,7 +98,7 @@ const Expertise = () => {
                         <div  className="h-full flex flex-col items-center text-center">
                             <img alt="team"  className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src={Male2} />
                                 <div  className="w-full">
-                                    <h2  className="title-font font-medium text-lg text-gray-900">Dr. William Anderson</h2>
+                                    <h2  className="title-font font-medium text-lg text-gray-200">Dr. William Anderson</h2>
                                     <h3  className="text-gray-300 mb-3">DDS</h3>
                                     <p  className="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
                                     <span  className="inline-flex">
