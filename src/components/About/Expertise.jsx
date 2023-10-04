@@ -17,8 +17,8 @@ const Expertise = () => {
                         <div  className="h-full flex flex-col items-center text-center">
                             <img alt="team"  className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src={Female} />
                                 <div  className="w-full">
-                                    <h2  className="title-font font-medium text-lg text-gray-900">Alper Kamu</h2>
-                                    <h3  className="text-gray-500 mb-3">UI Developer</h3>
+                                    <h2  className="title-font font-medium text-lg text-gray-900">Dr. Emily Parker</h2>
+                                    <h3  className="text-gray-500 mb-3">MD</h3>
                                     <p  className="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
                                     <span  className="inline-flex">
                                         <a  className="text-gray-500">
@@ -44,8 +44,8 @@ const Expertise = () => {
                         <div  className="h-full flex flex-col items-center text-center">
                             <img alt="team"  className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src={Male} />
                                 <div  className="w-full">
-                                    <h2  className="title-font font-medium text-lg text-gray-900">Holden Caulfield</h2>
-                                    <h3  className="text-gray-500 mb-3">UI Developer</h3>
+                                    <h2  className="title-font font-medium text-lg text-gray-900">Dr. Michael Roberts</h2>
+                                    <h3  className="text-gray-500 mb-3">PhD</h3>
                                     <p  className="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
                                     <span  className="inline-flex">
                                         <a  className="text-gray-500">
@@ -71,8 +71,8 @@ const Expertise = () => {
                         <div  className="h-full flex flex-col items-center text-center">
                             <img alt="team"  className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src={Female2}/>
                                 <div  className="w-full">
-                                    <h2  className="title-font font-medium text-lg text-gray-900">Atticus Finch</h2>
-                                    <h3  className="text-gray-500 mb-3">UI Developer</h3>
+                                    <h2  className="title-font font-medium text-lg text-gray-900">Dr. Sarah Johnson</h2>
+                                    <h3  className="text-gray-500 mb-3">DO</h3>
                                     <p  className="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
                                     <span  className="inline-flex">
                                         <a  className="text-gray-500">
@@ -98,8 +98,8 @@ const Expertise = () => {
                         <div  className="h-full flex flex-col items-center text-center">
                             <img alt="team"  className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src={Male2} />
                                 <div  className="w-full">
-                                    <h2  className="title-font font-medium text-lg text-gray-900">Henry Letham</h2>
-                                    <h3  className="text-gray-500 mb-3">UI Developer</h3>
+                                    <h2  className="title-font font-medium text-lg text-gray-900">Dr. William Anderson</h2>
+                                    <h3  className="text-gray-500 mb-3">DDS</h3>
                                     <p  className="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
                                     <span  className="inline-flex">
                                         <a  className="text-gray-500">
