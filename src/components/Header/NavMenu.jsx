@@ -9,19 +9,19 @@ const NavMenu = () => {
     }
 
     return (
-        <nav className="bg-rose-50 text-rose-500">
+        <nav className="bg-slate-800 text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
-                        <Link to="/" className=" text-rose-500 hover:text-rose-700 font-bold text-xl">BloodCare BD</Link>
+                        <Link to="/" className=" hover:text-rose-700 font-bold text-xl">BloodCare BD</Link>
                     </div>
                     <div className="hidden md:block">
                         <div className="ml-4 flex items-center">
-                            <Link to="/" className=" text-rose-500 hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-                            <Link to="/donors" className="text-rose-500 hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">Donors</Link>
-                            <Link to="/faq" className="text-rose-500 hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">FAQ</Link>
-                            <Link to="/about_us" className="text-rose-500 hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">About Us</Link>
-                            <Link to="/login" className="text-rose-500 hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">Login</Link>
+                            <Link to="/" className=" hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+                            <Link to="/donors" className=" hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">Donors</Link>
+                            <Link to="/faq" className=" hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">FAQ</Link>
+                            <Link to="/about_us" className=" hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">About Us</Link>
+                            <Link to="/login" className=" hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">Login</Link>
                         </div>
                     </div>
                     <div className="md:hidden flex items-center">

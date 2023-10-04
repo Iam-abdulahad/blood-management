@@ -9,6 +9,7 @@ import Faq from './components/FAQ/Faq.jsx';
 import About from './components/About/About.jsx';
 import Login from './components/Login/Login.jsx';
 import SignUp from './components/Login/SignUp';
+import Footer from './components/Footer/Footer';
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
         path: "/sign_up",
         element: <SignUp></SignUp>
       },
+      {
+        path: "/footer",
+        element: <Footer></Footer>
+      }
     ]
   }
 ]);
