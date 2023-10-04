@@ -15,7 +15,7 @@ const Banner = () => {
                     </div>
                     <p className="mb-8 leading-relaxed font-bold">At LifeSavers Blood Management Foundation, our mission is to ensure the safe, efficient, and sustainable utilization of blood resources to save lives and improve healthcare outcomes. Founded with a vision of a world where no one suffers due to blood shortages or wastage, we have dedicated ourselves to managing this vital resource with precision, compassion, and innovation.</p>
                     <div className="flex justify-center">
-                        <Link to='/login' className="inline-flex text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded text-lg">Become a donor</Link>
+                        <Link to='/about_us' className="inline-flex text-white bg-pink-500 border-0 py-2 px-6 focus:outline-none hover:bg-pink-600 rounded text-lg">Know More</Link>
                     </div>
                 </div>
                 <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
