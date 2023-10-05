@@ -20,6 +20,7 @@ const NavMenu = () => {
                             <Link to="/" className=" hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
                             <Link to="/donors" className=" hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">Donors</Link>
                             <Link to="/faq" className=" hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">FAQ</Link>
+                            <Link to="/team" className=" hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">Team</Link>
                             <Link to="/about_us" className=" hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">About Us</Link>
                             <Link to="/login" className=" hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">Login</Link>
                         </div>

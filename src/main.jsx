@@ -10,6 +10,7 @@ import About from './components/About/About.jsx';
 import Login from './components/Login/Login.jsx';
 import SignUp from './components/Login/SignUp';
 import Footer from './components/Footer/Footer';
+import OurTeam from './components/OurTeam/OurTeam';
 
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path : "/faq",
         element: <Faq></Faq>
+      },
+      {
+        path: "/team",
+        element: <OurTeam></OurTeam>
       },
       {
         path: "/about_us",

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import TsParticles2 from '../Background/TsParticles2';
+import SocialLogin from './SocialLogin';
 
 const SignUp = () => {
     return (
@@ -33,12 +34,10 @@ const SignUp = () => {
                                     </div>
                                 </div>
                             </div>
-
+                            <SocialLogin></SocialLogin>
                         </div>
 
                     </div>
-
-
                 </div>
                 <div className="blob"></div>
             </div>

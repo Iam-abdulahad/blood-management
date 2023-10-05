@@ -18,7 +18,7 @@ const MainAbout = () => {
                     </div>
                     <p className="mb-8 leading-relaxed">At BloodCare, we are dedicated to promoting responsible and efficient blood usage, ensuring the safety of patients, and supporting the noble cause of blood donation. Our passion for improving healthcare outcomes drives us to provide you with the latest information, guidelines, and best practices in the field of blood management.</p>
                     <div className="flex justify-center">
-                        <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Become a Donor</button>
+                        <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">BECOME TO DONOR</button>
                     </div>
                 </div>
             </div>

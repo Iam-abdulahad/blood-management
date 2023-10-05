@@ -2,6 +2,7 @@ import React from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
 import TsParticles from '../Background/TsParticles';
+import SocialLogin from './SocialLogin';
 
 const Login = () => {
     return (
@@ -34,7 +35,7 @@ const Login = () => {
                                         </div>
                                     </div>
                                 </div>
-                                {/* <SocialLogin></SocialLogin> */}
+                                <SocialLogin></SocialLogin>
                             </div>
 
                         </div>
