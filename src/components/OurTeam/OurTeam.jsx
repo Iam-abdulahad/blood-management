@@ -8,13 +8,13 @@ import People6 from '../../assets/Team/people_6.jpg';
 import People7 from '../../assets/Team/people_7.jpg';
 import People8 from '../../assets/Team/people_8.jpg';
 import People9 from '../../assets/Team/people_9.jpg';
-import Expertise from './Expertise';
 
 
 const OurTeam = () => {
     return (
         <>
             <section className="text-white body-font">
+                
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-col text-center w-full mb-20">
                         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4">TEAM</h1>
@@ -105,7 +105,6 @@ const OurTeam = () => {
                     </div>
                 </div>
             </section>
-            <Expertise></Expertise>
         </>
     );
 };

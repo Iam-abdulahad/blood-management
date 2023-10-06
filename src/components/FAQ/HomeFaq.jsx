@@ -7,7 +7,7 @@ const HomeFaq = () => {
             <section className="w-full divide-y divide-slate-200 rounded border border-slate-200 bg-white">
                 <details className="group p-4" open>
                     <summary className="relative cursor-pointer list-none pr-8 font-medium text-slate-700 transition-colors duration-300 focus-visible:outline-none group-hover:text-slate-900  [&::-webkit-details-marker]:hidden">
-                        Which languages are available for the components?
+                        What is a blood management organization (BMO)?
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="absolute right-0 top-1 h-4 w-4 shrink-0 stroke-slate-700 transition duration-300 group-open:rotate-45"
@@ -29,15 +29,12 @@ const HomeFaq = () => {
                         </svg>
                     </summary>
                     <p className="mt-4 text-slate-500">
-                        Wind UI team currently releases it's components on HTML and React,
-                        but also thinking on adding more in the future. You can easily
-                        toggle between the two languages through the code blocks, on each
-                        page component.
+                        A blood management organization (BMO) is an entity dedicated to the efficient and safe use of blood and blood products in healthcare settings. BMOs work to optimize the entire blood supply chain, from donation to transfusion, to ensure patient safety and reduce costs.
                     </p>
                 </details>
                 <details className="group p-4">
                     <summary className="relative cursor-pointer list-none pr-8 font-medium text-slate-700 transition-colors duration-300 focus-visible:outline-none group-hover:text-slate-900  [&::-webkit-details-marker]:hidden">
-                        Which icons are you using in the components?
+                    Why is blood management important?
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="absolute right-0 top-1 h-4 w-4 shrink-0 stroke-slate-700 transition duration-300 group-open:rotate-45"
@@ -59,13 +56,12 @@ const HomeFaq = () => {
                         </svg>
                     </summary>
                     <p className="mt-4 text-slate-500">
-                        All our icons related ui components are using, heroicons SVG icons,
-                        by the makers of Tailwind CSS.
+                    Blood management is crucial to ensure that the right blood products are available for patients who need them, reduce unnecessary transfusions, minimize the risks associated with blood transfusions, and conserve a limited resource.
                     </p>
                 </details>
                 <details className="group p-4">
                     <summary className="relative cursor-pointer list-none pr-8 font-medium text-slate-700 transition-colors duration-300 focus-visible:outline-none group-hover:text-slate-900  [&::-webkit-details-marker]:hidden">
-                        How can I learn about the latest changes?
+                    How does blood management benefit patients?
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="absolute right-0 top-1 h-4 w-4 shrink-0 stroke-slate-700 transition duration-300 group-open:rotate-45"
@@ -87,13 +83,12 @@ const HomeFaq = () => {
                         </svg>
                     </summary>
                     <p className="mt-4 text-slate-500">
-                        You can find all latest additions and updates in our Changelog page,
-                        where we have a detailed timeline for any changes.
+                    Blood management benefits patients by minimizing their exposure to unnecessary blood transfusions, reducing the risk of transfusion-related complications, and ensuring that they receive the right blood products when needed.
                     </p>
                 </details>
                 <details className="group p-4">
                     <summary className="relative cursor-pointer list-none pr-8 font-medium text-slate-700 transition-colors duration-300 focus-visible:outline-none group-hover:text-slate-900  [&::-webkit-details-marker]:hidden">
-                        Where can I find the official TailwindCSS documentation?
+                    What are the primary goals of a BMO?
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="absolute right-0 top-1 h-4 w-4 shrink-0 stroke-slate-700 transition duration-300 group-open:rotate-45"
@@ -115,9 +110,7 @@ const HomeFaq = () => {
                         </svg>
                     </summary>
                     <p className="mt-4 text-slate-500">
-                        You can find the official TailwindCSS detailed documentation as well
-                        as the official TailwindCSS website link on our footer under
-                        Resources.
+                    The primary goals of a BMO include promoting patient safety, ensuring the appropriate use of blood products, reducing healthcare costs, and optimizing the blood supply chain.
                     </p>
                 </details>
             </section>

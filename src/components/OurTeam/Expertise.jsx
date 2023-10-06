@@ -4,6 +4,7 @@ import Female2 from '../../assets/Expertise/female-doctor-2.jpg';
 import Male from '../../assets/Expertise/male-doctor.jpg';
 import Male2 from '../../assets/Expertise/male-doctor-2.jpg';
 
+
 const Expertise = () => {
     return (
         <section  className="text-white body-font">
