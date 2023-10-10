@@ -10,7 +10,7 @@ const auth = getAuth(app);
 const SignUp = () => {
 
 
-    const handleFromSubmit = (event) => {
+    const handleSignUp = (event) => {
         //get input values
         event.preventDefault();
         const email = event.target.email.value;
@@ -38,14 +38,12 @@ const SignUp = () => {
             <TsParticles2></TsParticles2>
             <div className="card">
                 <div className="bg ">
-
-
                     <div className="bg-gray-200 ">
                         <div className="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
                             <h1 className="font-bold text-center text-2xl mb-5">Create an account</h1>
                             <div className="bg-white shadow w-full rounded-lg divide-y divide-gray-200">
                                 <div className="px-5 py-7">
-                                    <form onSubmit={handleFromSubmit}>
+                                    <form onSubmit={handleSignUp}>
                                         <label className="font-semibold text-sm text-gray-600 pb-1 block">Email</label>
                                         <input type="email" name='email' className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" />
                                         <label className="font-semibold text-sm text-gray-600 pb-1 block">Password</label>
@@ -66,7 +64,6 @@ const SignUp = () => {
                             </div>
                             <SocialLogin></SocialLogin>
                         </div>
-
                     </div>
                 </div>
                 <div className="blob"></div>
