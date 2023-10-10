@@ -11,6 +11,7 @@ const Login = () => {
 
 
     const handleLogin = event => {
+        //get input values
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;

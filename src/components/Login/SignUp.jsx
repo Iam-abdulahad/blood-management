@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import TsParticles2 from '../Background/TsParticles2';
 import SocialLogin from './SocialLogin';
-import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, sendEmailVerification } from 'firebase/auth';
 import app from '../../firebase.config';
 
 
@@ -24,11 +24,21 @@ const SignUp = () => {
                 // Signed up msg
                 const user = userCredential.user;
                 console.log(user);
+
+
+                sendEmailVerification(auth.currentUser)
+                    .then(() => {
+                        alert("Please verify your email")
+                    });
             })
             .catch((error) => {
                 const errorMessage = error.message;
                 console.error(errorMessage);
             });
+
+
+
+
     }
 
 
