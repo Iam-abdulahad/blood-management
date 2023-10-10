@@ -1,6 +1,6 @@
 .card {
     position: absolute;
-    width: 400px;
+    width: 380px;
     height: 560px;
     border-radius: 14px;
     z-index: 1111;
@@ -17,7 +17,7 @@
     position: absolute;
     top: 5px;
     left: 5px;
-    width: 390px;
+    width: 370px;
     height: 550px;
     z-index: 2;
     background: rgba(255, 255, 255, .95);

@@ -38,7 +38,7 @@ const Login = () => {
             <div className="card">
                 <div className="bg ">
                     <div className="bg-gray-200 ">
-                        <div className="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
+                        <div className="py-10 px-5 xs:p-0 mx-auto md:w-full md:max-w-md">
                             <h1 className="font-bold text-center text-2xl mb-5">Login</h1>
                             <div className="bg-white shadow w-full rounded-lg divide-y divide-gray-200">
                                 <div className="px-5 py-7">
