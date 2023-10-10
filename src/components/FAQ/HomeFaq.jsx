@@ -1,9 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HomeFaq = () => {
     return (
-        <div className='container mx-auto px-5'>
+        <div className='container mx-auto px-5 pb-8 py-8'>
             <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-white dark:text-white text-center py-6">Frequently asked questions</h2>
+                                    <div className="flex items-center justify-center my-8">
+                            <div className="bg-gray-300 h-px w-full sm:w-1/4 md:w-1/2"></div>
+                        </div>
             <section className="w-full divide-y divide-slate-200 rounded border border-slate-200 bg-white">
                 <details className="group p-4" open>
                     <summary className="relative cursor-pointer list-none pr-8 font-medium text-slate-700 transition-colors duration-300 focus-visible:outline-none group-hover:text-slate-900  [&::-webkit-details-marker]:hidden">
@@ -34,7 +38,7 @@ const HomeFaq = () => {
                 </details>
                 <details className="group p-4">
                     <summary className="relative cursor-pointer list-none pr-8 font-medium text-slate-700 transition-colors duration-300 focus-visible:outline-none group-hover:text-slate-900  [&::-webkit-details-marker]:hidden">
-                    Why is blood management important?
+                        Why is blood management important?
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="absolute right-0 top-1 h-4 w-4 shrink-0 stroke-slate-700 transition duration-300 group-open:rotate-45"
@@ -56,12 +60,12 @@ const HomeFaq = () => {
                         </svg>
                     </summary>
                     <p className="mt-4 text-slate-500">
-                    Blood management is crucial to ensure that the right blood products are available for patients who need them, reduce unnecessary transfusions, minimize the risks associated with blood transfusions, and conserve a limited resource.
+                        Blood management is crucial to ensure that the right blood products are available for patients who need them, reduce unnecessary transfusions, minimize the risks associated with blood transfusions, and conserve a limited resource.
                     </p>
                 </details>
                 <details className="group p-4">
                     <summary className="relative cursor-pointer list-none pr-8 font-medium text-slate-700 transition-colors duration-300 focus-visible:outline-none group-hover:text-slate-900  [&::-webkit-details-marker]:hidden">
-                    How does blood management benefit patients?
+                        How does blood management benefit patients?
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="absolute right-0 top-1 h-4 w-4 shrink-0 stroke-slate-700 transition duration-300 group-open:rotate-45"
@@ -83,12 +87,12 @@ const HomeFaq = () => {
                         </svg>
                     </summary>
                     <p className="mt-4 text-slate-500">
-                    Blood management benefits patients by minimizing their exposure to unnecessary blood transfusions, reducing the risk of transfusion-related complications, and ensuring that they receive the right blood products when needed.
+                        Blood management benefits patients by minimizing their exposure to unnecessary blood transfusions, reducing the risk of transfusion-related complications, and ensuring that they receive the right blood products when needed.
                     </p>
                 </details>
                 <details className="group p-4">
                     <summary className="relative cursor-pointer list-none pr-8 font-medium text-slate-700 transition-colors duration-300 focus-visible:outline-none group-hover:text-slate-900  [&::-webkit-details-marker]:hidden">
-                    What are the primary goals of a BMO?
+                        What are the primary goals of a BMO?
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="absolute right-0 top-1 h-4 w-4 shrink-0 stroke-slate-700 transition duration-300 group-open:rotate-45"
@@ -110,10 +114,13 @@ const HomeFaq = () => {
                         </svg>
                     </summary>
                     <p className="mt-4 text-slate-500">
-                    The primary goals of a BMO include promoting patient safety, ensuring the appropriate use of blood products, reducing healthcare costs, and optimizing the blood supply chain.
+                        The primary goals of a BMO include promoting patient safety, ensuring the appropriate use of blood products, reducing healthcare costs, and optimizing the blood supply chain.
                     </p>
                 </details>
             </section>
+            <div className="flex justify-center py-8">
+                <Link to="/faq" className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">SEE MORE FAQ</Link>
+            </div>
         </div>
     );
 };

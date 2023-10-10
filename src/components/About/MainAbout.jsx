@@ -6,6 +6,10 @@ const MainAbout = () => {
         <section className="container mx-auto text-white body-font">
             <div className='text-center pt-6'>
                 <h1 className='text-2xl font-medium title-font mb-4 '>About BloodCare</h1>
+                <div className="flex items-center justify-center my-8">
+                    <div className="bg-gray-300 h-px w-full sm:w-1/4 md:w-1/2"></div>
+                </div>
+
             </div>
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
                 <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">

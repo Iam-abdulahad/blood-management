@@ -1,18 +1,14 @@
 import React from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
-import TsParticles from '../Background/TsParticles';
 import SocialLogin from './SocialLogin';
 
 const Login = () => {
     return (
         <div className='container mx-auto flex justify-center pt-12'>
-            <TsParticles></TsParticles>
             <div className="card">
                 <div className="bg ">
-
-
-                    <div className="bg-gray-100 ">
+                    <div className="bg-gray-200 ">
                         <div className="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
                             <h1 className="font-bold text-center text-2xl mb-5">Login</h1>
                             <div className="bg-white shadow w-full rounded-lg divide-y divide-gray-200">

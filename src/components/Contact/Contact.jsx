@@ -5,6 +5,9 @@ const Contact = () => {
         <div className='container mx-auto'>
             <div className='text-center text-white'>
                 <h1 className="text-2xl font-medium title-font mb-4">CONTACT</h1>
+                                        <div className="flex items-center justify-center my-8">
+                            <div className="bg-gray-300 h-px w-full sm:w-1/4 md:w-1/2"></div>
+                        </div>
             </div>
             <section className="text-gray-600 body-font relative">
                 <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">

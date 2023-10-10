@@ -1,0 +1,19 @@
+.active {
+    border: 0.2px solid white;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 500;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.notActive {
+    color: gainsboro;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 500;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-left: 10px;
+}
