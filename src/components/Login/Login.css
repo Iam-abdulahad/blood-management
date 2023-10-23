@@ -1,9 +1,9 @@
 .card {
-    position: absolute;
+    position: relative;
     width: 380px;
     height: 560px;
     border-radius: 14px;
-    z-index: 999;
+    z-index: 3;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@
 }
 
 .bg {
-    position: absolute;
+    position: static;
     top: 5px;
     left: 5px;
     width: 370px;

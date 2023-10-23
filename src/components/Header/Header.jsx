@@ -7,6 +7,7 @@ const Header = () => {
         <div>
             <NavMenu></NavMenu>
             <Outlet></Outlet>
+            <Footer></Footer>
         </div>
     );
 };
