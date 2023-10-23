@@ -1,13 +1,18 @@
 import { Link } from 'react-router-dom';
 import TsParticles2 from '../Background/TsParticles2';
 import SocialLogin from './SocialLogin';
-import { createUserWithEmailAndPassword, getAuth, sendEmailVerification } from 'firebase/auth';
+import {getAuth, sendEmailVerification } from 'firebase/auth';
 import app from '../../firebase.config';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../providers/AuthProviders';
 
 
 const auth = getAuth(app);
 
 const SignUp = () => {
+    const [error, setError] = useState(null);
+    const { createUser } = useContext(AuthContext);
+
 
 
     const handleSignUp = (event) => {
@@ -15,20 +20,22 @@ const SignUp = () => {
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
-        // console.log(email, password);
+
+        if (password.length < 6) {
+            setError('Password should be 6 characters or more.');
+            return;
+        }
 
         /* Create user with email-password authentication */
-
-        createUserWithEmailAndPassword(auth, email, password)
+        createUser(email, password)
             .then((userCredential) => {
                 // Signed up msg
                 const user = userCredential.user;
                 console.log(user);
 
-
                 sendEmailVerification(auth.currentUser)
                     .then(() => {
-                        alert("Please verify your email")
+                        alert("Check your email to verify your account")
                     });
             })
             .catch((error) => {
@@ -60,6 +67,7 @@ const SignUp = () => {
                                         <input type="password" name='password' className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" />
                                         <button type="submit" className="transition duration-200 h-14 bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:bg-gradient-to-r from-purple-500 to-pink-500 focus:bg-blue-700 focus:outline-none rounded-lg px-3 py-2 text-white w-full">Sign Up</button>
                                     </form>
+                                    <p className=''>{error}</p>
                                 </div>
                                 <div className="py-5 mx-8">
                                     <div className="grid grid-cols-2 gap-1">

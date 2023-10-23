@@ -1,15 +1,18 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../providers/AuthProviders';
 
 const NavMenu = () => {
+    // const [isOpen, setIsOpen] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const { user, logOut } = useContext(AuthContext);
 
     function toggleMenu() {
         setIsOpen(!isOpen);
     }
 
     return (
-        <nav className="bg-slate-800 text-white">
+        <nav className="bg-slate-800 text-white sticky top-0">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
@@ -22,7 +25,16 @@ const NavMenu = () => {
                             <Link to="/faq" className=" hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">FAQ</Link>
                             <Link to="/team" className=" hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">Team</Link>
                             <Link to="/about_us" className=" hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">About Us</Link>
-                            <Link to="/login" className=" hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium">Login</Link>
+
+                            {
+                                user ?
+                                    <button className=' hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium' onClick={logOut}>Log out</button>
+                                    :
+                                    <>
+                                        <Link to="/login" className=' hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium'>Login</Link>
+                                    </>
+                            }
+
                         </div>
                     </div>
                     <div className="md:hidden flex items-center">
@@ -50,7 +62,14 @@ const NavMenu = () => {
                         <Link to="/faq" className="hover:text-rose-700 block px-3 py-2 rounded-md text-base font-medium">FAQ</Link>
                         <Link to="/team" className="hover:text-rose-700 block px-3 py-2 rounded-md text-base font-medium">Team</Link>
                         <Link to="/about_us" className="hover:text-rose-700 block px-3 py-2 rounded-md text-base font-medium">About</Link>
-                        <Link to="/login" className="hover:text-rose-700 block px-3 py-2 rounded-md text-base font-medium">Login</Link>
+                        {
+                            user ?
+                                <button className='hover:text-rose-700 block px-3 py-2 rounded-md text-base font-medium' onClick={logOut}>Log out</button>
+                                :
+                                <>
+                                    <Link to="/login" className='hover:text-rose-700 block px-3 py-2 rounded-md text-base font-medium'>Login</Link>
+                                </>
+                        }
                     </div>
                 </div>
             )}
