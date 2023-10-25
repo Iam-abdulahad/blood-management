@@ -1,18 +1,34 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProviders';
+import Swal from 'sweetalert2';
 
 const NavMenu = () => {
-    // const [isOpen, setIsOpen] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const { user, logOut } = useContext(AuthContext);
 
     function toggleMenu() {
         setIsOpen(!isOpen);
     }
-    console.log(user);
+
+
+    const handleLogOut = () => {
+        logOut()
+            .then(result => {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Log Out Successfully',
+                    showConfirmButton: false,
+                    timer: 1800
+                })
+            })
+            .catch(error => console.log(error));
+    }
+
+
     return (
-        <nav className="bg-slate-800 text-white sticky top-0">
+        <nav className="bg-slate-800 text-white sticky top-0 z-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
@@ -28,7 +44,7 @@ const NavMenu = () => {
 
                             {
                                 user ?
-                                    <button className=' hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium' onClick={logOut}>Log out</button>
+                                    <button className=' hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium' onClick={handleLogOut}>Log out</button>
                                     :
                                     <>
                                         <Link to="/login" className=' hover:text-rose-700 px-3 py-2 rounded-md text-sm font-medium'>Login</Link>
@@ -64,7 +80,7 @@ const NavMenu = () => {
                         <Link to="/about_us" className="hover:text-rose-700 block px-3 py-2 rounded-md text-base font-medium">About</Link>
                         {
                             user ?
-                                <button className='hover:text-rose-700 block px-3 py-2 rounded-md text-base font-medium' onClick={logOut}>Log out</button>
+                                <button className='hover:text-rose-700 block px-3 py-2 rounded-md text-base font-medium' onClick={handleLogOut}>Log out</button>
                                 :
                                 <>
                                     <Link to="/login" className='hover:text-rose-700 block px-3 py-2 rounded-md text-base font-medium'>Login</Link>

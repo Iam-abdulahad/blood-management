@@ -5,6 +5,7 @@ import SocialLogin from './SocialLogin';
 // import { getAuth } from 'firebase/auth';
 // import app from '../../firebase.config';
 import { AuthContext } from '../providers/AuthProviders';
+import Hexagone from '../Background/Hexagone';
 
 // const auth = getAuth(app);
 
@@ -28,7 +29,6 @@ const Login = () => {
         signIn(email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
-                console.log(user);
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -41,6 +41,7 @@ const Login = () => {
 
     return (
         <div className='container mx-auto flex justify-center py-8 '>
+            <Hexagone></Hexagone>
             <div className="card">
                 <div className="bg ">
                     <div className="bg-gray-200 ">

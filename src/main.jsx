@@ -12,6 +12,7 @@ import SignUp from './components/Login/SignUp';
 import Footer from './components/Footer/Footer';
 import TeamPage from './components/OurTeam/TeamPage';
 import AuthProviders from './components/providers/AuthProviders';
+import BloodDonationForm from './components/Donors/BloodDonationForm';
 
 
 const router = createBrowserRouter([
@@ -49,8 +50,8 @@ const router = createBrowserRouter([
         element: <SignUp></SignUp>
       },
       {
-        path: "/footer",
-        element: <Footer></Footer>
+        path: "/BloodDonationForm",
+        element: <BloodDonationForm></BloodDonationForm>
       }
     ]
   }

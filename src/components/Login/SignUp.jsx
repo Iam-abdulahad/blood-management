@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import TsParticles2 from '../Background/TsParticles2';
 import SocialLogin from './SocialLogin';
 import {getAuth, sendEmailVerification } from 'firebase/auth';
 import app from '../../firebase.config';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../providers/AuthProviders';
+import Hexagone from '../Background/Hexagone';
 
 
 const auth = getAuth(app);
@@ -52,7 +52,7 @@ const SignUp = () => {
 
     return (
         <div className='container mx-auto flex justify-center py-8'>
-            <TsParticles2></TsParticles2>
+            <Hexagone></Hexagone>
             <div className="card">
                 <div className="bg ">
                     <div className="bg-gray-200 ">
