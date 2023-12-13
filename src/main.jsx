@@ -9,10 +9,9 @@ import Faq from './components/FAQ/Faq.jsx';
 import About from './components/About/About.jsx';
 import Login from './components/Login/Login.jsx';
 import SignUp from './components/Login/SignUp';
-import Footer from './components/Footer/Footer';
 import TeamPage from './components/OurTeam/TeamPage';
 import AuthProviders from './components/providers/AuthProviders';
-import BloodDonationForm from './components/Donors/BloodDonationForm';
+import BecomeDonor from './components/Donors/BecomeDonor';
 
 
 const router = createBrowserRouter([
@@ -50,8 +49,8 @@ const router = createBrowserRouter([
         element: <SignUp></SignUp>
       },
       {
-        path: "/BloodDonationForm",
-        element: <BloodDonationForm></BloodDonationForm>
+        path: "/Become_a_Donor",
+        element: <BecomeDonor></BecomeDonor>
       }
     ]
   }

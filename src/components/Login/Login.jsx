@@ -6,6 +6,7 @@ import SocialLogin from './SocialLogin';
 // import app from '../../firebase.config';
 import { AuthContext } from '../providers/AuthProviders';
 import Hexagone from '../Background/Hexagone';
+import Swal from 'sweetalert2';
 
 // const auth = getAuth(app);
 
@@ -28,7 +29,14 @@ const Login = () => {
 
         signIn(email, password)
             .then((userCredential) => {
-                const user = userCredential.user;
+                // const user = userCredential.user;
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Login Successful',
+                    showConfirmButton: false,
+                    timer: 1800
+                })
             })
             .catch((error) => {
                 const errorMessage = error.message;

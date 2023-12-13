@@ -5,6 +5,7 @@ import app from '../../firebase.config';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../providers/AuthProviders';
 import Hexagone from '../Background/Hexagone';
+import Swal from 'sweetalert2';
 
 
 const auth = getAuth(app);
@@ -35,7 +36,11 @@ const SignUp = () => {
 
                 sendEmailVerification(auth.currentUser)
                     .then(() => {
-                        alert("Check your email to verify your account")
+                        Swal.fire(
+                          'Your account has been created!',
+                          'Check your email to verify your account!',
+                          'success'
+                        )
                     });
             })
             .catch((error) => {
