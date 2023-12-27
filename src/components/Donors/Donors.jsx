@@ -10,19 +10,20 @@ const Donors = () => {
             <h3>This is donors page</h3>
             <Loading></Loading>
 
-            <form className="bg-white p-8 rounded shadow-md max-w-md">
-                <label for="weight" className="block text-gray-700 mb-2">Weight (kg):</label>
-                <input type="number" id="weight" name="weight" placeholder="Enter your weight" required
-                    className="w-full p-2 border rounded focus:outline-none focus:ring focus:border-blue-300" />
+            <form>
+                <label for="countryCode">Country Code:</label>
+                <select id="countryCode" name="countryCode">
+                    {/* <!-- You can add more options as needed --> */}
+                    <option value="+1">+1 (United States)</option>
+                    <option value="+44">+44 (United Kingdom)</option>
+                    <option value="+91">+91 (India)</option>
+                    {/* <!-- Add more country codes and names as necessary --> */}
+                </select>
 
-                <label for="height" className="block text-gray-700 mt-4 mb-2">Height (cm):</label>
-                <input type="number" id="height" name="height" placeholder="Enter your height" required
-                    className="w-full p-2 border rounded focus:outline-none focus:ring focus:border-blue-300" />
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required />
 
-                <button type="submit"
-                    className="mt-4 bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 focus:outline-none focus:ring focus:border-blue-300">
-                    Submit
-                </button>
+                    <button type="submit">Submit</button>
             </form>
 
         </div>
