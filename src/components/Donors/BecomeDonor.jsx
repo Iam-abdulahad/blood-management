@@ -23,10 +23,19 @@ const BecomeDonor = () => {
         const height = event.target.height.value;
         const countryName = event.target.countryName.value;
         const districtName = event.target.districtName.value;
+        const donor = {name, email, phone, bloodGroup, gender, birthday, lastDonationDate, donorWeight, height, countryName, districtName}
 
-
-
-        console.log(name, email, phone, bloodGroup, gender, birthday, lastDonationDate, donorWeight, height, countryName, districtName);
+        fetch('http://localhost:5000/donor', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(donor)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
     }
 
     return (
@@ -169,8 +178,8 @@ const BecomeDonor = () => {
 
                         {/* Pick user's address  */}
 
-                        <div className="bg-gray-700 p-6 rounded-lg p-2 mb-4 text-gray-700">
-                            <label for="country" className="block mb-2">Country Name:</label>
+                        <div className="bg-gray-700 p-6 rounded-lg p-2 mb-4 text-gray-200">
+                            <label for="country" className="block mb-2 ">Country Name:</label>
                             <input type="text" id="weight" name="countryName" placeholder="Enter your Country Name" required
                                 className="w-full p-2 border rounded focus:outline-none focus:ring focus:border-blue-300" />
 

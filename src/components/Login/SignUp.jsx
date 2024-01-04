@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import SocialLogin from './SocialLogin';
-import {getAuth, sendEmailVerification } from 'firebase/auth';
+import { getAuth, sendEmailVerification } from 'firebase/auth';
 import app from '../../firebase.config';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../providers/AuthProviders';
@@ -14,13 +14,26 @@ const SignUp = () => {
     const [error, setError] = useState(null);
     const { createUser } = useContext(AuthContext);
 
-
-
     const handleSignUp = (event) => {
         //get input values
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
+        const user = { email, password };
+
+
+        fetch('http://localhost:5000/user', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+
 
         if (password.length < 6) {
             setError('Password should be 6 characters or more.');
@@ -32,14 +45,14 @@ const SignUp = () => {
             .then((userCredential) => {
                 // Signed up msg
                 const user = userCredential.user;
-                console.log(user);
+                // console.log(user);
 
                 sendEmailVerification(auth.currentUser)
                     .then(() => {
                         Swal.fire(
-                          'Your account has been created!',
-                          'Check your email to verify your account!',
-                          'success'
+                            'Your account has been created!',
+                            'Check your email to verify your account!',
+                            'success'
                         )
                     });
             })
@@ -47,9 +60,6 @@ const SignUp = () => {
                 const errorMessage = error.message;
                 console.error(errorMessage);
             });
-
-
-
 
     }
 
