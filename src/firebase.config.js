@@ -7,13 +7,13 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyApiWJefW4pTU94Y9jW_13oMnolsy8mRzY",
-  authDomain: "bloodcare-bangladesh.firebaseapp.com",
-  projectId: "bloodcare-bangladesh",
-  storageBucket: "bloodcare-bangladesh.appspot.com",
-  messagingSenderId: "963876943893",
-  appId: "1:963876943893:web:431b4054f19341ad2d361c",
-  measurementId: "G-3N8NJ7PQWJ",
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
+  measurementId: import.meta.env.VITE_measurementId,
 };
 
 // Initialize Firebase

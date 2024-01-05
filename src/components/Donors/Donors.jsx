@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
 import Loading from '../Shared/Loading';
-import AddressPickerForm from './AddressPickerForm';
 
 const Donors = () => {
+
+    const image_token = import.meta.env.VITE_Image_Upload_Token;
+    console.log(image_token);
 
 
     return (
         <div>
             <h3>This is donors page</h3>
             <Loading></Loading>
-
-
+            
         </div>
     );
 };
