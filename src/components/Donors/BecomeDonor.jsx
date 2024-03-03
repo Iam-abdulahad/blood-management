@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import './BecomeDonor.css';
 import TsParticles2 from '../Background/TsParticles2';
 
-const BecomeDonor = () => {
 
+
+const BecomeDonor = () => {
+    const image_token = import.meta.env.VITE_Image_Upload_Token;
+    const image_hosting_url = `https://api.imgbb.com/1/upload?expiration=600&key=${image_token}`;
 
     const [gender, setGender] = useState('');
 
@@ -23,7 +26,7 @@ const BecomeDonor = () => {
         const height = event.target.height.value;
         const countryName = event.target.countryName.value;
         const districtName = event.target.districtName.value;
-        const donor = {name, email, phone, bloodGroup, gender, birthday, lastDonationDate, donorWeight, height, countryName, districtName}
+        const donor = { name, email, phone, bloodGroup, gender, birthday, lastDonationDate, donorWeight, height, countryName, districtName }
 
         fetch('http://localhost:5000/donor', {
             method: 'POST',
@@ -58,7 +61,7 @@ const BecomeDonor = () => {
 
                     <div className=" bg-gray-400 w-80 flex justify-center items-center mx-auto mb-8 rounded-lg">
                         <div className="text-center mb-6 pt-4 px-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" className="text-blue-500 inline-block mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" strokeLinejoin="round" strokeLinecap="round" viewBox="0 0 24 24" strokeWidth="2" fill="none" stroke="currentColor" className="text-blue-500 inline-block mb-2">
                                 <polyline points="16 16 12 12 8 16"></polyline>
                                 <line y2="21" x2="12" y1="12" x1="12"></line>
                                 <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
@@ -76,7 +79,7 @@ const BecomeDonor = () => {
                     <div className='grid  grid-col md:grid-cols-2 gap-1 md:gap-8'>
                         <input placeholder="Full Name" className=" bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="text" name='name' />
 
-                        <input placeholder="Email" className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="email" name='email'/>
+                        <input placeholder="Email" className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="email" name='email' />
 
                         <input placeholder="Phone Number" className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="tel" name='phone' />
                     </div>
@@ -164,26 +167,24 @@ const BecomeDonor = () => {
                         {/* Weight and Height */}
 
                         <div className="bg-gray-700 p-6 rounded-lg p-2 mb-4 text-gray-700">
-                            <label for="weight" className="block mb-2">Weight (kg):</label>
+                            <label htmlFor="weight" className="text-gray-200 block mb-2">Weight (kg):</label>
                             <input type="number" id="weight" name="donorWeight" placeholder="Enter your weight" required
                                 className="w-full p-2 border rounded focus:outline-none focus:ring focus:border-blue-300" />
 
-                            <label for="height" className="block mt-4 mb-2">Height (cm):</label>
+                            <label htmlFor="height" className="text-gray-200 block mt-4 mb-2">Height (cm):</label>
                             <input type="number" id="height" name="height" placeholder="Enter your height" required
                                 className="w-full p-2 border rounded focus:outline-none focus:ring focus:border-blue-300" />
 
                         </div>
 
-
-
                         {/* Pick user's address  */}
 
                         <div className="bg-gray-700 p-6 rounded-lg p-2 mb-4 text-gray-200">
-                            <label for="country" className="block mb-2 ">Country Name:</label>
+                            <label htmlFor="country" className="text-gray-200 block mb-2 ">Country Name:</label>
                             <input type="text" id="weight" name="countryName" placeholder="Enter your Country Name" required
                                 className="w-full p-2 border rounded focus:outline-none focus:ring focus:border-blue-300" />
 
-                            <label for="district" className="block mt-4 mb-2">District Name:</label>
+                            <label htmlFor="district" className="text-gray-200 block mt-4 mb-2">District Name:</label>
                             <input type="text" id="district" name="districtName" placeholder="Enter Your District Name" required
                                 className="w-full p-2 border rounded focus:outline-none focus:ring focus:border-blue-300" />
 

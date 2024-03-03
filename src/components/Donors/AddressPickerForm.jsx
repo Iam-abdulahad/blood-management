@@ -30,7 +30,7 @@ const AddressPickerForm = () => {
 
                 {/* Street */}
                 <div className="mb-4">
-                    <label htmlFor="street" className="block text-gray-700 font-semibold mb-2">
+                    <label htmlhtmlFor="street" className="block text-gray-700 font-semibold mb-2">
                         Street
                     </label>
                     <input
@@ -46,7 +46,7 @@ const AddressPickerForm = () => {
 
                 {/* City */}
                 <div className="mb-4">
-                    <label htmlFor="city" className="block text-gray-700 font-semibold mb-2">
+                    <label htmlhtmlFor="city" className="block text-gray-700 font-semibold mb-2">
                         City
                     </label>
                     <input
@@ -62,7 +62,7 @@ const AddressPickerForm = () => {
 
                 {/* State */}
                 <div className="mb-4">
-                    <label htmlFor="state" className="block text-gray-700 font-semibold mb-2">
+                    <label htmlhtmlFor="state" className="block text-gray-700 font-semibold mb-2">
                         State
                     </label>
                     <input
@@ -78,7 +78,7 @@ const AddressPickerForm = () => {
 
                 {/* Zip */}
                 <div className="mb-6">
-                    <label htmlFor="zip" className="block text-gray-700 font-semibold mb-2">
+                    <label htmlhtmlFor="zip" className="block text-gray-700 font-semibold mb-2">
                         Zip Code
                     </label>
                     <input

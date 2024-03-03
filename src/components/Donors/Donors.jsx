@@ -2,9 +2,6 @@ import Loading from '../Shared/Loading';
 
 const Donors = () => {
 
-    const image_token = import.meta.env.VITE_Image_Upload_Token;
-    console.log(image_token);
-
 
     return (
         <div>
