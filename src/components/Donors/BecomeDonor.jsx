@@ -27,18 +27,18 @@ const BecomeDonor = () => {
         const countryName = event.target.countryName.value;
         const districtName = event.target.districtName.value;
         const donor = { name, email, phone, bloodGroup, gender, birthday, lastDonationDate, donorWeight, height, countryName, districtName }
-
-        fetch('http://localhost:5000/donor', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(donor)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-            })
+        console.log(donor);
+        // fetch('http://localhost:5000/donor', {
+        //     method: 'POST',
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     },
+        //     body: JSON.stringify(donor)
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log(data);
+        //     })
     }
 
     return (
@@ -59,21 +59,19 @@ const BecomeDonor = () => {
                 <form onSubmit={handleDonorRegistration} className='w-full md:w-4/5 sm:w-3/5 px-8'>
 
 
-                    <div className=" bg-gray-400 w-80 flex justify-center items-center mx-auto mb-8 rounded-lg">
-                        <div className="text-center mb-6 pt-4 px-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" strokeLinejoin="round" strokeLinecap="round" viewBox="0 0 24 24" strokeWidth="2" fill="none" stroke="currentColor" className="text-blue-500 inline-block mb-2">
-                                <polyline points="16 16 12 12 8 16"></polyline>
-                                <line y2="21" x2="12" y1="12" x1="12"></line>
-                                <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
-                                <polyline points="16 16 12 12 8 16"></polyline>
+                    <div className="bg-gradient-to-r from-purple-400 to-pink-500 w-96 mx-auto my-8 rounded-lg p-8 shadow-lg text-center">
+                        <div className="mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white mx-auto">
+                                <path d="M12 19V5M5 12l7-7 7 7" />
                             </svg>
 
-                            <h4 className='text-lg font-bold mb-4'>Upload your Profile Picture</h4>
-
-                            <input className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" name="file" type="file" placeholder="Select Photo" />
+                            <h4 className="text-2xl font-bold text-white mb-4">Upload your Profile Picture</h4>
                         </div>
+                        <label htmlFor="fileInput" className="cursor-pointer inline-block bg-white text-purple-500 rounded-full px-6 py-3 shadow-md hover:shadow-lg transition duration-300">
+                            Select Photo
+                        </label>
+                        <input id="fileInput" className="hidden" name="file" type="file" />
                     </div>
-
 
 
                     <div className='grid  grid-col md:grid-cols-2 gap-1 md:gap-8'>

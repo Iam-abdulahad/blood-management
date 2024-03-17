@@ -10,8 +10,8 @@ import About from './components/About/About.jsx';
 import Login from './components/Login/Login.jsx';
 import SignUp from './components/Login/SignUp';
 import TeamPage from './components/OurTeam/TeamPage';
-import AuthProviders from './components/providers/AuthProviders';
 import BecomeDonor from './components/Donors/BecomeDonor';
+import AuthProviders from './providers/AuthProviders.jsx';
 
 
 const router = createBrowserRouter([

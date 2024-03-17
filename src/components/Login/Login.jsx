@@ -4,16 +4,17 @@ import { Link } from 'react-router-dom';
 import SocialLogin from './SocialLogin';
 // import { getAuth } from 'firebase/auth';
 // import app from '../../firebase.config';
-import { AuthContext } from '../providers/AuthProviders';
+import { AuthContext } from '../../providers/AuthProviders';
 import Hexagone from '../Background/Hexagone';
 import Swal from 'sweetalert2';
+import Loading from '../Shared/Loading';
 
 // const auth = getAuth(app);
 
 const Login = () => {
 
     const [error, setError] = useState(null);
-    const { signIn } = useContext(AuthContext);
+    const { signIn, loading } = useContext(AuthContext);
 
     const handleLogin = event => {
         event.preventDefault();
@@ -28,6 +29,7 @@ const Login = () => {
         //Sign in with Email and Password
 
         signIn(email, password)
+
             .then((userCredential) => {
                 // const user = userCredential.user;
                 Swal.fire({
@@ -52,7 +54,7 @@ const Login = () => {
             <Hexagone></Hexagone>
             <div className="card">
                 <div className="bg ">
-                    <div className="bg-gray-200 ">
+                    <div className="bg-gray-200 h-full ">
                         <div className="py-6 px-5 xs:p-0 mx-auto md:w-full md:max-w-md">
                             <h1 className="font-bold text-center text-2xl mb-5">Login</h1>
                             <div className="bg-white shadow w-full rounded-lg divide-y divide-gray-200">
@@ -62,7 +64,10 @@ const Login = () => {
                                         <input type="email" name='email' className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" />
                                         <label className="font-semibold text-sm text-gray-600 pb-1 block">Password</label>
                                         <input type="password" name='password' className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full" />
-                                        <button type="submit" className="transition duration-200 h-14 bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:bg-gradient-to-r from-purple-500 to-pink-500 focus:bg-blue-700 focus:outline-none rounded-lg px-3 py-2 text-white w-full">Sign in</button>
+
+
+                                        {loading ? <Loading></Loading> : <button type="submit" className="transition duration-200 h-14 bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:bg-gradient-to-r from-purple-500 to-pink-500 focus:bg-blue-700 focus:outline-none rounded-lg px-3 py-2 text-white w-full">Sign in</button>
+                                        }
                                     </form>
                                     <p className=''>{error}</p>
                                     <Link className="transition duration-200 hover:text-blue-500 text-gray-600 text-sm font-semibold">Forgot password?</Link>

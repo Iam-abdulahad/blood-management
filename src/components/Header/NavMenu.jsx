@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../providers/AuthProviders';
+import { AuthContext } from '../../providers/AuthProviders'
 import Swal from 'sweetalert2';
 
 const NavMenu = () => {
