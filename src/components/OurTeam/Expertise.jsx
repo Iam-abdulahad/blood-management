@@ -1,4 +1,3 @@
-import React from 'react';
 import Female from '../../assets/Expertise/female-doctor.jpg';
 import Female2 from '../../assets/Expertise/female-doctor-2.jpg';
 import Male from '../../assets/Expertise/male-doctor.jpg';

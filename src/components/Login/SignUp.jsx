@@ -41,6 +41,7 @@ const SignUp = () => {
                             'Check your email to verify your account!',
                             'success'
                         )
+                        event.target.reset();
                     });
             })
             .catch((error) => {

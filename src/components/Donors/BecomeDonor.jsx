@@ -45,7 +45,6 @@ const BecomeDonor = () => {
         const countryName = event.target.countryName.value;
         const districtName = event.target.districtName.value;
         const donor = {image, name, email, phone, bloodGroup, gender, birthday, lastDonationDate, donorWeight, height, countryName, districtName }
-        // console.log(donor);
 
 
         fetch('http://localhost:5000/donor', {

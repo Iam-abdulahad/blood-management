@@ -39,6 +39,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1800
                 })
+                event.target.reset();
             })
             .catch((error) => {
                 const errorMessage = error.message;
