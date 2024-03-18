@@ -1,21 +1,39 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import './BecomeDonor.css';
 import TsParticles2 from '../Background/TsParticles2';
+import Swal from 'sweetalert2';
 
 
 
 const BecomeDonor = () => {
+
     const image_token = import.meta.env.VITE_Image_Upload_Token;
-    const image_hosting_url = `https://api.imgbb.com/1/upload?expiration=600&key=${image_token}`;
+    const imageHostingUrl = `https://api.imgbb.com/1/upload?key=${image_token}`;
+
 
     const [gender, setGender] = useState('');
+    // const [previewImage, setPreviewImage] = useState(null);
 
     const handleGenderChange = (event) => {
         setGender(event.target.value);
     };
 
+
+    // const handleImageChange = (event) => {
+    //     const file = event.target.files[0];
+    //     if (file) {
+    //         const reader = new FileReader();
+    //         reader.onloadend = () => {
+    //             setPreviewImage(reader.result);
+    //         };
+    //         reader.readAsDataURL(file);
+    //     }
+    // };
+
+
     const handleDonorRegistration = event => {
         event.preventDefault();
+        const image =  event.target.files;
         const name = event.target.name.value;
         const email = event.target.email.value;
         const phone = event.target.phone.value;
@@ -26,19 +44,26 @@ const BecomeDonor = () => {
         const height = event.target.height.value;
         const countryName = event.target.countryName.value;
         const districtName = event.target.districtName.value;
-        const donor = { name, email, phone, bloodGroup, gender, birthday, lastDonationDate, donorWeight, height, countryName, districtName }
-        console.log(donor);
-        // fetch('http://localhost:5000/donor', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(donor)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //     })
+        const donor = {image, name, email, phone, bloodGroup, gender, birthday, lastDonationDate, donorWeight, height, countryName, districtName }
+        // console.log(donor);
+
+
+        fetch('http://localhost:5000/donor', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(donor)
+        })
+            .then(res => res.json())
+            .then(data => {
+                Swal.fire({
+                    title: "Congratulations!",
+                    text: "You are in the donor list!",
+                    icon: "success"
+                  });
+                  event.target.reset();
+            })
     }
 
     return (
@@ -59,19 +84,22 @@ const BecomeDonor = () => {
                 <form onSubmit={handleDonorRegistration} className='w-full md:w-4/5 sm:w-3/5 px-8'>
 
 
-                    <div className="bg-gradient-to-r from-purple-400 to-pink-500 w-96 mx-auto my-8 rounded-lg p-8 shadow-lg text-center">
+                    {/* <div className="bg-gradient-to-r from-purple-400 to-pink-500 w-96 mx-auto my-8 rounded-full p-8 shadow-lg text-center">
                         <div className="mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white mx-auto">
-                                <path d="M12 19V5M5 12l7-7 7 7" />
-                            </svg>
-
+                            {previewImage ? (
+                                <img src={previewImage} alt="Preview" className="text-white mx-auto rounded-full" width="48" height="48" />
+                            ) : (
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white mx-auto">
+                                    <path d="M12 19V5M5 12l7-7 7 7" />
+                                </svg>
+                            )}
                             <h4 className="text-2xl font-bold text-white mb-4">Upload your Profile Picture</h4>
                         </div>
                         <label htmlFor="fileInput" className="cursor-pointer inline-block bg-white text-purple-500 rounded-full px-6 py-3 shadow-md hover:shadow-lg transition duration-300">
                             Select Photo
                         </label>
-                        <input id="fileInput" className="hidden" name="file" type="file" />
-                    </div>
+                        <input id="fileInput" className="hidden" name="file" type="file" onChange={handleImageChange} accept="image/*" />
+                    </div> */}
 
 
                     <div className='grid  grid-col md:grid-cols-2 gap-1 md:gap-8'>
@@ -88,7 +116,7 @@ const BecomeDonor = () => {
 
                         {/* Blood group selection section */}
 
-                        <div className="bg-gray-700 p-4 rounded-lg p-2 mb-4 ">
+                        <div className="bg-gray-700 rounded-lg p-2 mb-4 ">
                             <h4 className="text-gray-200 text-lg mb-4 font-bold">What is your blood type?</h4>
                             <select id="bloodGroup" name="bloodGroup" className="border p-2 rounded-md focus:outline-none focus:ring focus:border-blue-300">
                                 <option value="" disabled selected className="hidden">Select a Blood Group</option>
@@ -105,7 +133,7 @@ const BecomeDonor = () => {
 
                         {/* Gender Selection */}
 
-                        <div className="bg-gray-700 p-4 rounded-lg p-2 mb-4 text-white">
+                        <div className="bg-gray-700 rounded-lg p-2 mb-4 text-white">
                             <h1 className="text-2xl font-bold mb-4">Gender Input</h1>
 
                             <label className="block mb-2">
@@ -143,7 +171,7 @@ const BecomeDonor = () => {
                         </div>
 
                         {/* Birthday Selection */}
-                        <div className="bg-gray-700 p-6 rounded-lg p-2 mb-4">
+                        <div className="bg-gray-700 rounded-lg p-2 mb-4">
                             <h4 className="text-gray-200 text-lg mb-4 font-bold">Select Your Birthday</h4>
 
                             <div className="mb-4">
@@ -153,7 +181,7 @@ const BecomeDonor = () => {
                         </div>
 
                         {/* Last Last Donation Date */}
-                        <div className="bg-gray-700 p-6 rounded-lg p-2 mb-4">
+                        <div className="bg-gray-700 p-6 rounded-lg  mb-4">
                             <h4 className="text-gray-200 text-lg mb-4 font-bold">Last Donation Date</h4>
 
                             <div className="mb-4">
@@ -162,9 +190,9 @@ const BecomeDonor = () => {
 
                         </div>
 
-                        {/* Weight and Height */}
+                        {/* Pick Weight and Height */}
 
-                        <div className="bg-gray-700 p-6 rounded-lg p-2 mb-4 text-gray-700">
+                        <div className="bg-gray-700 p-6 rounded-lg  mb-4 text-gray-700">
                             <label htmlFor="weight" className="text-gray-200 block mb-2">Weight (kg):</label>
                             <input type="number" id="weight" name="donorWeight" placeholder="Enter your weight" required
                                 className="w-full p-2 border rounded focus:outline-none focus:ring focus:border-blue-300" />
@@ -177,14 +205,14 @@ const BecomeDonor = () => {
 
                         {/* Pick user's address  */}
 
-                        <div className="bg-gray-700 p-6 rounded-lg p-2 mb-4 text-gray-200">
+                        <div className="bg-gray-700 p-6 rounded-lg mb-4 text-gray-200">
                             <label htmlFor="country" className="text-gray-200 block mb-2 ">Country Name:</label>
                             <input type="text" id="weight" name="countryName" placeholder="Enter your Country Name" required
-                                className="w-full p-2 border rounded focus:outline-none focus:ring focus:border-blue-300" />
+                                className="w-full p-2 border rounded focus:outline-none focus:ring text-gray-800 focus:border-blue-300" />
 
                             <label htmlFor="district" className="text-gray-200 block mt-4 mb-2">District Name:</label>
                             <input type="text" id="district" name="districtName" placeholder="Enter Your District Name" required
-                                className="w-full p-2 border rounded focus:outline-none focus:ring focus:border-blue-300" />
+                                className="w-full p-2 border rounded focus:outline-none focus:ring text-gray-800 focus:border-blue-300" />
 
                         </div>
 
