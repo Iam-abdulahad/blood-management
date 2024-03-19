@@ -115,7 +115,7 @@ const BecomeDonor = () => {
 
                         {/* Blood group selection section */}
 
-                        <div className="bg-gray-700 rounded-lg p-2 mb-4 ">
+                        <div className="bg-gray-700 rounded-lg p-6 mb-4 ">
                             <h4 className="text-gray-200 text-lg mb-4 font-bold">What is your blood type?</h4>
                             <select id="bloodGroup" name="bloodGroup" className="border p-2 rounded-md focus:outline-none focus:ring focus:border-blue-300">
                                 <option value="" disabled selected className="hidden">Select a Blood Group</option>
@@ -132,7 +132,7 @@ const BecomeDonor = () => {
 
                         {/* Gender Selection */}
 
-                        <div className="bg-gray-700 rounded-lg p-2 mb-4 text-white">
+                        <div className="bg-gray-700 rounded-lg p-6 mb-4 text-white">
                             <h1 className="text-2xl font-bold mb-4">Gender Input</h1>
 
                             <label className="block mb-2">
@@ -170,7 +170,7 @@ const BecomeDonor = () => {
                         </div>
 
                         {/* Birthday Selection */}
-                        <div className="bg-gray-700 rounded-lg p-2 mb-4">
+                        <div className="bg-gray-700 rounded-lg p-6 mb-4">
                             <h4 className="text-gray-200 text-lg mb-4 font-bold">Select Your Birthday</h4>
 
                             <div className="mb-4">

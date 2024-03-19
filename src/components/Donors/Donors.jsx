@@ -9,7 +9,7 @@ const Donors = () => {
     const [donors, setDonors] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/donors')
+        fetch('https://blood-management-server.vercel.app/donors')
             .then(res => res.json())
             .then(data => setDonors(data))
     }, [])
@@ -23,7 +23,7 @@ const Donors = () => {
                 <div className="flex-grow bg-gradient-to-r from-pink-500 via-yellow-500 to-pink-500 h-1 mx-4"></div>
             </div>
 
-            <div className=" grid grid-cols-4 gap-4">
+            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
                 {
                     donors.map(donor => <Donor
