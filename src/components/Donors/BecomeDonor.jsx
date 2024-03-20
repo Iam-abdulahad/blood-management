@@ -7,8 +7,8 @@ import Swal from 'sweetalert2';
 
 const BecomeDonor = () => {
 
-    const image_token = import.meta.env.VITE_Image_Upload_Token;
-    const imageHostingUrl = `https://api.imgbb.com/1/upload?key=${image_token}`;
+    // const image_token = import.meta.env.VITE_Image_Upload_Token;
+    // const imageHostingUrl = `https://api.imgbb.com/1/upload?key=${image_token}`;
 
 
     const [gender, setGender] = useState('');
