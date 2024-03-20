@@ -50,7 +50,8 @@ const BecomeDonor = () => {
         fetch('https://blood-management-server.vercel.app/donor', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
             },
             body: JSON.stringify(donor)
         })
