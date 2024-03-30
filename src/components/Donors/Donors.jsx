@@ -9,7 +9,7 @@ const Donors = () => {
     const [donors, setDonors] = useState([]);
 
     useEffect(() => {
-        fetch('https://blood-management-server.vercel.app/donors')
+        fetch('https://blood-management-server.onrender.com/donors')
             .then(res => res.json())
             .then(data => setDonors(data))
     }, [])

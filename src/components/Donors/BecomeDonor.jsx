@@ -47,7 +47,7 @@ const BecomeDonor = () => {
         const donor = {image, name, email, phone, bloodGroup, gender, birthday, lastDonationDate, donorWeight, height, countryName, districtName }
 
 
-        fetch('https://blood-management-server.vercel.app/donor', {
+        fetch('https://blood-management-server.onrender.com/donor', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
